@@ -1,10 +1,28 @@
 site_name: Copy-of-files Documentation
+docs_dir: docs
 theme:
-  name: readthedocs
+  name: material
   logo: assets/logo.png
-
-extra_css:
-  - css/custom.css
+  features:
+    - navigation.expand
+    - content.code.copy
+  palette:
+    # Mode sombre (Slate)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    # Mode clair (Default)
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
 
 nav:
   - Home: index.md
