@@ -24,6 +24,9 @@ theme:
         icon: material/brightness-7
         name: Switch to dark mode
 
+extra_css:
+  - css/syntax_custom.css
+
 nav:
   - Home: index.md
   - Script details: script.md

@@ -1,0 +1,24 @@
+/* Customisation de la coloration syntaxique pour le mode sombre (scheme: slate) */
+[data-md-color-scheme="slate"] .highlight {
+    /* Couleur de fond générale du bloc de code */
+    background-color: #282c34; /* Un gris plus foncé */
+}
+
+[data-md-color-scheme="slate"] .highlight .c { /* Commentaire */
+    color: #5c6370; /* Gris plus doux */
+}
+
+[data-md-color-scheme="slate"] .highlight .k { /* Mot-clé (e.g., if, for, echo) */
+    color: #c678dd; /* Violet */
+}
+
+[data-md-color-scheme="slate"] .highlight .s { /* Chaîne de caractères (string) */
+    color: #98c379; /* Vert */
+}
+
+[data-md-color-scheme="slate"] .highlight .nv { /* Nom de variable */
+    color: #e6c07b; /* Orange */
+}
+
+/* Vous pouvez ajouter des règles similaires pour le mode clair si nécessaire */
+/* [data-md-color-scheme="default"] .highlight .c { color: #888; } */
