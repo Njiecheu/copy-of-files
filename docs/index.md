@@ -1,8 +1,8 @@
-# 🚀 Copy-of-files
+# Copy-of-files
 
 `copy-of-files` est un utilitaire Bash léger conçu pour automatiser le déploiement de fichiers sur plusieurs machines distantes au sein d'un réseau local. Il est particulièrement utile pour les administrateurs système ou les développeurs travaillant sur des clusters de machines.
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
 - **Déploiement en masse** : Cible une plage d'IP dynamique.
 - **Vérification de connectivité** : Effectue un `ping` avant chaque tentative de transfert pour éviter les timeouts `scp` inutiles.
