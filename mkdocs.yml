@@ -1,0 +1,11 @@
+site_name: Copy-of-files Documentation
+theme:
+  name: readthedocs
+  logo: assets/logo.png
+
+extra_css:
+  - css/custom.css
+
+nav:
+  - Home: index.md
+  - Script details: script.md
