@@ -2,7 +2,7 @@ site_name: Copy-of-files Documentation
 docs_dir: docs
 theme:
   name: material
-  logo: assets/logo.png
+  logo: assets/logo.webp
   features:
     - navigation.expand
     - content.code.copy
