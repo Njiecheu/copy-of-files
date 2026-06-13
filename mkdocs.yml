@@ -31,7 +31,6 @@ extra_css:
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
-      inventory_version: 1
       use_pygments: true
   - pymdownx.inlinehilite
   - pymdownx.superfences
