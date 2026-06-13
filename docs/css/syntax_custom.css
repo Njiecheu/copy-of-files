@@ -25,11 +25,12 @@
 /* Centrage des boutons de navigation (Précédent / Suivant) */
 .md-footer__inner {
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
     gap: 2rem; /* Espace entre les deux boutons */
 }
 
 .md-footer__link {
-    flex: 0 1 auto !important; /* Empêche les boutons de prendre toute la largeur */
+    flex: none !important; /* Empêche le bouton de s'étirer pour occuper l'espace */
     width: auto !important;
+    margin: 0 !important; /* Supprime les marges auto (margin-left: auto sur le bouton Next) */
 }
