@@ -7,7 +7,6 @@ theme:
     - navigation.expand
     - content.code.copy
     - navigation.footer
-    - navigation.top
   palette:
     # Mode sombre (Slate)
     - media: "(prefers-color-scheme: dark)"
@@ -28,6 +27,14 @@ theme:
 
 extra_css:
   - css/syntax_custom.css
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      inventory_version: 1
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
 
 nav:
   - Home: index.md

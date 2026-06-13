@@ -1,24 +1,22 @@
-/* Customisation de la coloration syntaxique pour le mode sombre (scheme: slate) */
-[data-md-color-scheme="slate"] .highlight {
-    /* Couleur de fond générale du bloc de code */
-    background-color: #282c34; /* Un gris plus foncé */
+/* Configuration commune aux blocs de code */
+.highlight {
+    border-radius: 4px;
 }
 
-[data-md-color-scheme="slate"] .highlight .c { /* Commentaire */
-    color: #5c6370; /* Gris plus doux */
-}
+/* Mode SOMBRE (Slate) */
+[data-md-color-scheme="slate"] .highlight { background-color: #282c34; }
+[data-md-color-scheme="slate"] .highlight .c { color: #5c6370; font-style: italic; } /* Commentaire */
+[data-md-color-scheme="slate"] .highlight .k { color: #c678dd; font-weight: bold; }  /* Mot-clé */
+[data-md-color-scheme="slate"] .highlight .s { color: #98c379; }                    /* String */
+[data-md-color-scheme="slate"] .highlight .nv { color: #e6c07b; }                   /* Variable */
+[data-md-color-scheme="slate"] .highlight .nb { color: #61afef; }                   /* Built-in (echo, ping) */
 
-[data-md-color-scheme="slate"] .highlight .k { /* Mot-clé (e.g., if, for, echo) */
-    color: #c678dd; /* Violet */
+/* Mode CLAIR (Default) */
+[data-md-color-scheme="default"] .highlight { 
+    background-color: #f5f5f5; 
 }
-
-[data-md-color-scheme="slate"] .highlight .s { /* Chaîne de caractères (string) */
-    color: #98c379; /* Vert */
-}
-
-[data-md-color-scheme="slate"] .highlight .nv { /* Nom de variable */
-    color: #e6c07b; /* Orange */
-}
-
-/* Vous pouvez ajouter des règles similaires pour le mode clair si nécessaire */
-/* [data-md-color-scheme="default"] .highlight .c { color: #888; } */
+[data-md-color-scheme="default"] .highlight .c { color: #999988; font-style: italic; }
+[data-md-color-scheme="default"] .highlight .k { color: #008080; font-weight: bold; }
+[data-md-color-scheme="default"] .highlight .s { color: #d14; }
+[data-md-color-scheme="default"] .highlight .nv { color: #008080; }
+[data-md-color-scheme="default"] .highlight .nb { color: #0086b3; }
