@@ -21,3 +21,15 @@
     --md-code-hl-name-color: #0086b3;
     --md-code-bg-color: #f5f5f5;
 }
+
+/* Centrage des boutons de navigation (Précédent / Suivant) */
+.md-footer__inner {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Espace entre les deux boutons */
+}
+
+.md-footer__link {
+    flex: 0 1 auto !important; /* Empêche les boutons de prendre toute la largeur */
+    width: auto !important;
+}
