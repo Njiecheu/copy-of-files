@@ -6,6 +6,8 @@ theme:
   features:
     - navigation.expand
     - content.code.copy
+    - navigation.footer
+    - navigation.top
   palette:
     # Mode sombre (Slate)
     - media: "(prefers-color-scheme: dark)"
