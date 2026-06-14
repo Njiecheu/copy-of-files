@@ -58,4 +58,4 @@ fi
 
 ---
 
-*Cette documentation sert de base pour comprendre le fonctionnement de nos outils. Pour voir une application concrète, consultez l'Introduction au projet Copy-of-files.*
+*Cette documentation sert de base pour comprendre le fonctionnement de nos outils. Pour voir une application concrète, consultez l'[Introduction au projet Copy-of-files](introduction.md).*
