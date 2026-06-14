@@ -1,44 +1,61 @@
-# **Copy-of-files**
+# **Généralités sur le Scripting Bash**
 
-`copy-of-files` est un utilitaire Bash léger conçu pour automatiser le déploiement de fichiers sur plusieurs machines distantes au sein d'un réseau local. Il est particulièrement utile pour les administrateurs système ou les développeurs travaillant sur des clusters de machines.
+Bash (Bourne Again SHell) est l'interface textuelle la plus répandue sur les systèmes Unix et Linux. Au-delà d'un simple interpréteur de commandes, c'est un langage de programmation complet pour l'automatisation.
 
-## **Fonctionnalités**
+## **Pourquoi utiliser Bash ?**
 
-- **Déploiement en masse** : Cible une plage d'IP dynamique.
-- **Vérification de connectivité** : Effectue un `ping` avant chaque tentative de transfert pour éviter les timeouts `scp` inutiles.
-- **Flexibilité** : Supporte les arguments en ligne de commande avec des valeurs par défaut intelligentes.
-- **Feedback visuel** : Affiche clairement l'état d'avancement du déploiement.
+- **Automatisation** : Exécuter des tâches répétitives sans intervention humaine.
+- **Portabilité** : Présent nativement sur presque tous les serveurs Linux.
+- **Puissance** : Permet de manipuler des fichiers, des processus et des flux réseau facilement.
 
-## **Getting Started**
+## **Concepts Fondamentaux**
 
-### **Prerequisites**
+### **1. Syntaxe et Variables**
+En Bash, l'assignation ne supporte pas d'espaces : `NAME="Utilisateur"`. Pour accéder à la valeur, on utilise le symbole `$` : `echo $NAME`.
 
-- **SSH/SCP** : Assurez-vous que `openssh-client` est installé localement et que le service SSH tourne sur les machines cibles.
-- **Authentification** : Il est fortement recommandé de configurer des clés SSH (`ssh-copy-id`) pour éviter d'avoir à saisir un mot de passe pour chaque machine.
-- **Réseau** : Votre machine doit avoir une route active vers la plage d'IP ciblée.
+### **2. Les Flux (IO Redirection)**
+- `>` : Redirige la sortie vers un fichier (écrase).
+- `>>` : Ajoute la sortie à la fin d'un fichier.
+- `2>&1` : Redirige les erreurs vers la sortie standard.
 
-### **Configuration**
+### **3. Structures de Contrôle**
+- **Conditions** : `if [ condition ]; then ... fi`
+- **Boucles** : `for item in list; do ... done`
 
-Le script utilise les variables par défaut suivantes dans `copy.sh` :
+## **Gestion des Erreurs**
+Chaque commande renvoie un *Exit Status* (de 0 à 255).
+- `0` signifie que tout s'est bien passé.
+- Une valeur différente de `0` indique une erreur spécifique.
 
-| Variable | Valeur par défaut | Description |
-| :--- | :--- | :--- |
-| `FILENAME` | `./client.c` | Le fichier source à copier. |
-| `DEST` | `/home/client/Downloads` | Le chemin de destination sur l'hôte distant. |
-| `RANGE` | `133..135` | La plage d'adresses IP (suffixe de l'IP `192.168.211.x`). |
+## **Exemple Pratique**
 
-### **Usage**
-
-Vous pouvez lancer le script sans arguments pour utiliser les valeurs par défaut, ou passer des paramètres spécifiques.
-
-**1. Rendre le script exécutable :**
+Voici un script simple qui regroupe ces concepts (création d'un dossier de log et de fichiers temporaires) :
 
 ```bash
-chmod +x copy.sh
+#!/bin/bash
+
+# 1. Définition de variables
+BACKUP_DIR="./ma_sauvegarde"
+LOG_FILE="rapport.log"
+
+# 2. Test et création de dossier (Condition & Redirection)
+if [ ! -d "$BACKUP_DIR" ]; then
+    echo "Initialisation : création du dossier..." > "$LOG_FILE"
+    mkdir "$BACKUP_DIR"
+fi
+
+# 3. Boucle pour créer des fichiers (Boucle & Redirection d'ajout)
+for i in {1..3}; do
+    echo "Génération du fichier de données $i" >> "$LOG_FILE"
+    touch "$BACKUP_DIR/donnee_$i.tmp"
+done
+
+# 4. Vérification du code de retour (Gestion des erreurs)
+if [ $? -eq 0 ]; then
+    echo "Opération terminée avec succès. Consultez $LOG_FILE"
+fi
 ```
 
-**2. Exécution avec les valeurs par défaut :**
+---
 
-```bash
-./copy.sh
-```
+*Cette documentation sert de base pour comprendre le fonctionnement de nos outils. Pour voir une application concrète, consultez l'Introduction au projet Copy-of-files.*
