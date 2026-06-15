@@ -6,8 +6,10 @@ L'utilitaire `copy-of-files` est une implémentation concrète de script Bash vi
 
 - **Déploiement en masse** : Cible une plage d'IP dynamique.
 - **Vérification de connectivité** : Effectue un `ping` avant chaque tentative de transfert pour éviter les timeouts `scp` inutiles.
+  ![Illustration de la connectivité réseau](img/scan.png)
 - **Flexibilité** : Supporte les arguments en ligne de commande avec des valeurs par défaut intelligentes.
 - **Feedback visuel** : Affiche clairement l'état d'avancement du déploiement.
+  ![Démonstration du feedback visuel du script](img/giphy.gif)
 
 ## **Mise en route**
 
