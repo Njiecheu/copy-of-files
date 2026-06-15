@@ -11,7 +11,7 @@ L'utilitaire `copy-of-files` est une implémentation concrète de script Bash vi
 
 ## **Mise en route**
 
-### **Prerequisites**
+### **Pré-requis**
 
 - **SSH/SCP** : Assurez-vous que `openssh-client` est installé localement et que le service SSH tourne sur les machines cibles.
 - **Authentification** : Il est fortement recommandé de configurer des clés SSH (`ssh-copy-id`) pour éviter d'avoir à saisir un mot de passe pour chaque machine.
