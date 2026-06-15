@@ -6,10 +6,10 @@ L'utilitaire `copy-of-files` est une implémentation concrète de script Bash vi
 
 - **Déploiement en masse** : Cible une plage d'IP dynamique.
 - **Vérification de connectivité** : Effectue un `ping` avant chaque tentative de transfert pour éviter les timeouts `scp` inutiles.
-  ![Illustration de la connectivité réseau](img/scan.png)
 - **Flexibilité** : Supporte les arguments en ligne de commande avec des valeurs par défaut intelligentes.
 - **Feedback visuel** : Affiche clairement l'état d'avancement du déploiement.
-  ![Démonstration du feedback visuel du script](img/giphy.gif)
+
+![Démonstration du feedback visuel](img/giphy.gif)
 
 ## **Mise en route**
 
@@ -18,6 +18,8 @@ L'utilitaire `copy-of-files` est une implémentation concrète de script Bash vi
 - **SSH/SCP** : Assurez-vous que `openssh-client` est installé localement et que le service SSH tourne sur les machines cibles.
 - **Authentification** : Il est fortement recommandé de configurer des clés SSH (`ssh-copy-id`) pour éviter d'avoir à saisir un mot de passe pour chaque machine.
 - **Réseau** : Votre machine doit avoir une route active vers la plage d'IP ciblée.
+
+!Illustration de la connectivité réseau
 
 ### **Configuration**
 
