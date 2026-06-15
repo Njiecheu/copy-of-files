@@ -19,7 +19,7 @@ L'utilitaire `copy-of-files` est une implémentation concrète de script Bash vi
 - **Authentification** : Il est fortement recommandé de configurer des clés SSH (`ssh-copy-id`) pour éviter d'avoir à saisir un mot de passe pour chaque machine.
 - **Réseau** : Votre machine doit avoir une route active vers la plage d'IP ciblée.
 
-!Illustration de la connectivité réseau
+![Illustration de la connectivité réseau](img/scan.png)
 
 ### **Configuration**
 
